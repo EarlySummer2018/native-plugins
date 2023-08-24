@@ -1,0 +1,23 @@
+{
+    "name": "cx-getAppList",
+    "id": "cx-getAppList",
+    "version": "0.0.2",
+    "description": "测试插件流程",
+    "_dp_type":"nativeplugin",
+    "_dp_nativeplugin":{
+        "android": {
+            "plugins": [
+                {
+                    "type": "module",
+                    "name": "cx-getAppList",
+                    "class": "com.cx.open_applist_plugin.OpenAppListModule"
+                }
+            ],
+			"integrateType": "aar",
+            "parameters": {
+                
+            },
+            "dependencies": []
+        }
+    }
+}
