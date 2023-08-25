@@ -13,11 +13,11 @@
                     "class": "com.cx.open_applist_plugin.OpenAppListModule"
                 }
             ],
-			"integrateType": "aar",
-            "parameters": {
-                
-            },
-            "dependencies": []
+	    "integrateType": "aar",
+            "minSdkVersion": 21,
+	    "permissions": [
+		"android.permission.QUERY_ALL_PACKAGES"
+	    ]
         }
     }
 }
