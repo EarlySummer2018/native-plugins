@@ -35,10 +35,16 @@ public class OpenAppListModule extends UniModule {
         try {
             Log.i("appList", "开始获取");
             //  如果参数不存在，则设置默认值
-            if (options == null) {
+            if (options.getString(TYPE) == null) {
                 options.put("type", "image/*");
+            }
+            if (options.getInteger(QUALITY) == null) {
                 options.put("quality", 100);
+            }
+            if (options.getInteger(WIDTH) == null) {
                 options.put("width", 60);
+            }
+            if (options.getString(HEIGHT) == null) {
                 options.put("height", 60);
             }
             Context context = mUniSDKInstance.getContext();
@@ -80,7 +86,6 @@ public class OpenAppListModule extends UniModule {
                 data.put("err", e);
                 errCallback.invoke(data);
             }
-            throw new RuntimeException(e);
         }
     }
     // drawable转bitmap
