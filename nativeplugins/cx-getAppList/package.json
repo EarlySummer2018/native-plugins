@@ -2,7 +2,7 @@
     "name": "cx-getAppList",
     "id": "cx-getAppList",
     "version": "0.0.2",
-    "description": "测试插件流程",
+    "description": "根据文件类型获取手机已安装且可以打开该文件的 App 列表",
     "_dp_type":"nativeplugin",
     "_dp_nativeplugin":{
         "android": {
@@ -13,11 +13,16 @@
                     "class": "com.cx.open_applist_plugin.OpenAppListModule"
                 }
             ],
-	    "integrateType": "aar",
+            "abis": [
+                "armeabi-v7a",
+                "arm64-v8a",
+                "x86"
+            ],
+	        "integrateType": "aar",
             "minSdkVersion": 21,
-	    "permissions": [
-		"android.permission.QUERY_ALL_PACKAGES"
-	    ]
+	        "permissions": [
+                "android.permission.QUERY_ALL_PACKAGES"
+            ]
         }
     }
 }
